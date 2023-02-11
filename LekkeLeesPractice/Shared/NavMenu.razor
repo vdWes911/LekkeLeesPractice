@@ -1,0 +1,66 @@
+﻿
+
+<div class="container-fluid g-0">
+
+    <div class="navbar navbar-dark px-3 py-3 navbar-color navbar-expand-md">
+        @*<img class="navbar-brand" src="/img/LekkeLeesLogo.svg" alt="LekkeLees.com" />*@
+        <a class="navbar-brand" href="">LekkeLeesPractice</a>
+        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="@NavMenuCssClass navbar-collapse ">
+            <ul class="navbar-nav mr-auto" >
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                        <span class="oi oi-home" style="font-size: 25px;" aria-hidden="true"></span> Home
+                    </NavLink>
+                </li>
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="counter">
+                        <span class="oi oi-plus"  style="font-size: 25px;" aria-hidden="true"></span> Counter
+                    </NavLink>
+                </li>
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="counter2">
+                        <span class="oi oi-list-rich"  style="font-size: 25px;" aria-hidden="true"></span> Counter 2
+                    </NavLink>
+                </li>
+
+                <li class="nav-item ms-lg-5 ms-md-4 ms ps-2 pt-2">
+                    <div class="dropdown">
+                        <span class="bi bi-person-circle px-1 text-secondary" style="font-size: 25px;" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="ps-1 dropdown-toggle"></span>
+                        </span>
+
+                        <ul class="dropdown-menu bg-dark navbar-dropdown" style="left: -8.6rem;" aria-labelledby="dropdownMenuButton1">
+                            <li>
+                                <a class="dropdown-item" href="#">My Bookshelf</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Manage Account</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Login</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}
