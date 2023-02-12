@@ -5,7 +5,7 @@
     <div class="navbar navbar-dark px-3 py-3 navbar-color navbar-expand-md">
         @*<img class="navbar-brand" src="/img/LekkeLeesLogo.svg" alt="LekkeLees.com" />*@
         <a href="">
-            <img class="navbar-brand nav-brand-hover" style="max-height:450px;" src="/img/LekkeLeesLogoOnly.svg" />
+            <img class="navbar-brand nav-brand-hover" src="/img/LekkeLeesLogoOnlyRounded.svg" />
         </a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
@@ -15,25 +15,25 @@
             <ul class="navbar-nav mr-auto" >
                 <li class="nav-item">
                     <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                        <span class="oi oi-home" style="font-size: 25px;" aria-hidden="true"></span> Home
+                        <span class="oi oi-home" aria-hidden="true"></span> Home
                     </NavLink>
                 </li>
                 <li class="nav-item">
                     <NavLink class="nav-link" href="counter">
-                        <span class="oi oi-plus"  style="font-size: 25px;" aria-hidden="true"></span> Counter
+                        <span class="oi oi-plus"  aria-hidden="true"></span> Counter
                     </NavLink>
                 </li>
                 <li class="nav-item">
                     <NavLink class="nav-link" href="counter2">
-                        <span class="oi oi-list-rich"  style="font-size: 25px;" aria-hidden="true"></span> Counter 2
+                        <span class="oi oi-list-rich" aria-hidden="true"></span> Counter 2
                     </NavLink>
                 </li>
 
-                <li class="nav-item ms-lg-5 ms-md-4 ms ps-2 pt-2">
+                <li class="nav-item user-nav-item ps-md-3 ps-2">
                     <div class="dropdown">
-                        <span class="bi bi-person-circle px-1 text-secondary" style="font-size: 25px;" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="bi bi-person-circle nav-link-user text-decoration-none px-1" style="font-size: 25px;" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="ps-1 dropdown-toggle"></span>
-                        </span>
+                        </a>
 
                         <ul class="dropdown-menu bg-dark navbar-dropdown" style="left: -8.6rem;" aria-labelledby="dropdownMenuButton1">
                             <li>

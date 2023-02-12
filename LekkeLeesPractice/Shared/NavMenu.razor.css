@@ -1,6 +1,11 @@
 
+
+
 .nav-brand-hover:hover {
-    opacity:0.8;
+    opacity: 0.85;
+    transform: scale(1.07);
+    transition-duration: 750ms;
+    transition-property: transform;
 }
 
 .navbar-color {
@@ -29,9 +34,12 @@
 }
 
 .nav-item {
-
     font-size: 1.0rem;
     padding-bottom: 0.5rem;
+}
+
+.nav-item ::deep span {
+    font-size: 25px;
 }
 
 .nav-item:first-of-type {
@@ -51,10 +59,15 @@
         padding-inline-start: 0.8rem;
     }
 
-.nav-item ::deep a.active {
-    background-color: rgba(255,255,255,0.25);
-    color: white;
-}
+    .nav-item ::deep a.active {
+        background-color: rgba(255,255,255,0.25);
+        color: white;
+    }
+
+    .nav-link-user {
+        color: rgba(255,255,255,.55) !important;
+    }
+
 
 .nav-item ::deep a:hover {
     background-color: rgba(255,255,255,0.1);
@@ -68,6 +81,10 @@
 
 /* Large Screen  */
 @media (min-width: 768px) {
+
+    .nav-item ::deep span {
+        font-size: 25px;
+    }
 
     .navbar-collapse{
         flex-direction:row-reverse;
