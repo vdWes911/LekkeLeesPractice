@@ -1,4 +1,8 @@
 
+.nav-brand-hover:hover {
+    opacity:0.8;
+}
+
 .navbar-color {
     background-color: rgba(134, 27, 45, 1);
 }

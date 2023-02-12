@@ -1,0 +1,14 @@
+﻿
+.home-page-banner-image {
+    width: 98%;
+    
+}
+
+/* Large Screen  */
+@media only screen and (min-width: 768px) {
+
+    .home-page-banner-image {
+        width: 100%;
+        max-height: 500px;
+    }
+}
