@@ -1,11 +1,9 @@
 
 
 
-.nav-brand-hover:hover {
+.navbar-brand-img:hover {
     opacity: 0.85;
-    transform: scale(1.07);
-    transition-duration: 750ms;
-    transition-property: transform;
+    transform: scale(1.05);
 }
 
 .navbar-color {
@@ -21,8 +19,12 @@
     background-color: rgba(0,0,0,0.4);
 }
 
-.navbar-brand {
+.navbar-brand-img {
+    max-width: 100%;
     font-size: 1.1rem;
+    object-fit: contain;
+    transition-duration: 750ms;
+    transition-property: transform;
 }   
 
 .oi {
@@ -34,7 +36,7 @@
 }
 
 .nav-item {
-    font-size: 1.0rem;
+    font-size: 0.7rem;
     padding-bottom: 0.5rem;
 }
 
@@ -50,23 +52,23 @@
         padding-right: 10rem;
     }*/
 
-    .nav-item ::deep a {
-        color: #d7d7d7;
-        border-radius: 10px;
-        height: contain;
-        display: flex;
-        align-items: center;
-        padding-inline-start: 0.8rem;
-    }
+.nav-item ::deep a {
+    color: #d7d7d7;
+    border-radius: 10px;
+    height: contain;
+    display: flex;
+    align-items: center;
+    padding-inline-start: 0.8rem;
+}
 
-    .nav-item ::deep a.active {
-        background-color: rgba(255,255,255,0.25);
-        color: white;
-    }
+.nav-item ::deep a.active {
+    background-color: rgba(255,255,255,0.25);
+    color: white;
+}
 
-    .nav-link-user {
-        color: rgba(255,255,255,.55) !important;
-    }
+.nav-link-user {
+    color: rgba(255,255,255,.55) !important;
+}
 
 
 .nav-item ::deep a:hover {
@@ -117,5 +119,28 @@
         /* Allow sidebar to scroll for tall menus */
         height: calc(100vh - 3.5rem);
         overflow-y: auto;
+    }
+}
+
+/* Smaller Displays */
+@media (max-width: 410px) {
+    .navbar-brand-wrapper {
+        width:75%;
+    }
+
+    .navbar-brand-img:hover {
+    }
+
+    .navbar-toggler {
+        max-height:80%;
+        text-align:center;
+    }
+
+    .navbar-toggler-icon {
+        font-size: 10px;
+    }
+
+    .navbar-brand-img {
+        opacity: 0.2;
     }
 }
