@@ -1,12 +1,38 @@
-﻿
+﻿/* Default to smallest screen */
+
 .home-page-banner-image {
     max-width: 80%;
     object-fit: contain;
 
 }
 
+.new-books-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+/* Medium Screen  */
+@media (min-width: 320px) {
+
+    .new-books-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+
+    .home-page-banner-image {
+    }
+}
+
 /* Large Screen  */
 @media (min-width: 768px) {
+
+    .new-books-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items:center;
+    }
 
     .home-page-banner-image {
     }

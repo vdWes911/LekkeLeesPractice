@@ -7,15 +7,28 @@
     <!--Do the max-height scaling in CSS, use media queries... This can be scoped to this file only-->
     <img class="home-page-banner-image" src="/img/LekkeLeesLogo.svg" />
 
-    <div class="container-fluid bg-dark mt-4 w-50" style="text-align:center">
+    <div class="container-fluid mt-4 d-flex justify-content-center" style="text-align:center">
 
-        <div class="bg-warning mt-3">
-            <p style="">This container will grow to fill anything inside it</p>
-            <p style="">This container will grow to fill anything inside it</p>
-            <p style="">This container will grow to fill anything inside it</p>
+        <div class="bg-warning new-books-container gap-md-2 py-3 gap-2 mt-3">
+            @if (names is not null)
+            {
+                @foreach (var name in names)
+                {
+                    <img class="w-50" src="/img/LekkeLeesLogo.svg" />
+                }
+            }
+            
         </div>
 
     </div>
 
+    <div class="container-fluid bg-danger">
+        <div>First things first</div>
+    </div>
+
 </div>
 
+@code {
+    List<string> names = new List<string>() { "Book1", "Book2", "Book3", "book4", "Book5", "Book6", "Book7" };
+
+}
