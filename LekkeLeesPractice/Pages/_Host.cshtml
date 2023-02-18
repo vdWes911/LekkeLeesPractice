@@ -30,11 +30,26 @@
 
     <link rel="icon" type="image/png" href="favicon.png"/>
 
+    <component type="typeof(HeadOutlet)" render-mode="Server" />
 
-    <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
+    <script src="~/js/Initializers.js" />
+
+    <script>
+
+        
+
+        
+
+        
+
+
+    </script>
+
+
+
 </head>
 <body>
-    <component type="typeof(App)" render-mode="ServerPrerendered" />
+    <component type="typeof(App)" render-mode="Server" />
 
     <div id="blazor-error-ui">
         <environment include="Staging,Production">

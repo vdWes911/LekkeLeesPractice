@@ -9,15 +9,14 @@
 
     <div class="container-fluid mt-4 d-flex justify-content-center" style="text-align:center">
 
-        <div class="bg-warning new-books-container gap-md-2 py-3 gap-2 mt-3">
-            @if (names is not null)
-            {
-                @foreach (var name in names)
-                {
-                    <img class="w-50" src="/img/LekkeLeesLogo.svg" />
-                }
-            }
-            
+        <div class="bg-warning m-3 py-3">
+
+            <div class="bg-info mb-4">
+                <h2>New releases</h2>
+            </div>
+
+            <BookCarousel Books="Books" />
+
         </div>
 
     </div>
@@ -29,6 +28,47 @@
 </div>
 
 @code {
+    List<BookViewModel>? Books;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+        }
+
+        await base.OnAfterRenderAsync(firstRender);
+    }
+
+
+    protected override async Task OnParametersSetAsync()
+    {
+        Books = new List<BookViewModel>()
+        {
+            new BookViewModel()
+            {
+                Id = 1,
+                Title = "Die Grot van Grillerige Gro van Geite en Giere",
+                FrontPageImagePath = "/img/CoverImages/Die GGGG 1.png",
+            },
+            new BookViewModel()
+            {
+                Id = 2,
+                Title = "Lienke en die bende",
+                FrontPageImagePath = "/img/CoverImages/Lienke en die bende.svg",
+            },
+            new BookViewModel()
+            {
+                Id = 3,
+                Title = "Elke boelie kry sy bief",
+                FrontPageImagePath = "/img/CoverImages/Elke boelie kry sy bief.png",
+            },
+        };
+
+        await InvokeAsync(StateHasChanged);
+
+        await base.OnParametersSetAsync();
+    }
+
     List<string> names = new List<string>() { "Book1", "Book2", "Book3", "book4", "Book5", "Book6", "Book7" };
 
 }

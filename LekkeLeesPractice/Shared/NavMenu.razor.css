@@ -78,47 +78,6 @@
     padding : 10px 0px 10px 0px;
 }
 
-/* Large Screen  */
-@media (min-width: 768px) {
-
-    .nav-item ::deep span {
-        font-size: 25px;
-    }
-
-    .navbar-collapse{
-        flex-direction:row-reverse;
-    }
-
-    .navbar-dropdown {
-        border-radius: 20px;
-    }
-
-    /*.navbar-nav {
-        display: flex;
-        justify-content: flex-end
-    }*/
-
-
-.nav-item:first-of-type {
-    padding-top: 0rem;
-}
-
-    /*.navbar-toggler {
-        display: none;
-    }
-
-    .collapse {*/
-        /* Never collapse the sidebar for wide screens */
-        /*display: block;
-    }*/
-    
-    .nav-scrollable {
-        /* Allow sidebar to scroll for tall menus */
-        height: calc(100vh - 3.5rem);
-        overflow-y: auto;
-    }
-}
-
 /* Smaller Displays */
 @media (max-width: 410px) {
     .navbar-brand-wrapper {
