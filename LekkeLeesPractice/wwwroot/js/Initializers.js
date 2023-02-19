@@ -1,6 +1,5 @@
 ﻿function initializeCarousel() {
     $('#bookCarousel').carousel({
-        interval: 5000,
         touch: true,
         wrap: true,
     });

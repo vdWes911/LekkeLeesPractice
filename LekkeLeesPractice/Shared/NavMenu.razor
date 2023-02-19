@@ -1,69 +1,66 @@
 ﻿
 
-<div class="container-fluid g-0">
+<div class="container-fluid navbar-color g-0">
 
-    <div class="navbar navbar-dark px-3 py-3 navbar-color navbar-expand-md">
+    <div class="d-flex mx-2" style="flex-direction:row;justify-content:space-between;align-items:center;padding-top:0.5rem;padding-bottom:0.2rem;">
         <div class="navbar-brand-wrapper">
             <a href="">
-                <img class="navbar-brand-img" src="/img/LekkeLeesLogoOnlyRounded.svg" />
+                <img class="navbar-brand-img" src="/img/LekkeLeesLogoOnlyRounded.svg" style="width:250px;" />
             </a>
         </div>
 
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <input type="text" placeholder="Search books" style="border-radius:20px 0px 0px 20px;padding: 5px 5px 0px 5px" />
-        <a class="oi oi-magnifying-glass" style="background-color: white;padding: 5px 5px 5px 0px"></a>
-
-        <div class="@NavMenuCssClass navbar-collapse ">
-            <ul class="navbar-nav mr-auto" >
-                <li class="nav-item">
-                    <NavLink class="nav-link" href="BookStore">
-                        <span class="oi oi-plus"  aria-hidden="true"></span> Boekwinkel
-                    </NavLink>
-                </li>
-
-                <li class="nav-item">
-                    <NavLink class="nav-link" href="BookStore">
-                        <span class="oi oi-mail" aria-hidden="true"></span> Kontak Ons
-                    </NavLink>
-                </li>
-
-                <li class="nav-item user-nav-item ps-md-3 ps-2">
-                    <div class="dropdown">
-                        <a class="bi bi-person-circle nav-link-user text-decoration-none px-1" style="font-size: 25px;" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <span class="ps-1 dropdown-toggle"></span>
-                        </a>
-
-                        <ul class="dropdown-menu bg-dark navbar-dropdown" style="left: -8.6rem;" aria-labelledby="dropdownMenuButton1">
-                            <li>
-                                <a class="dropdown-item" href="#">My Bookshelf</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Manage Account</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="#">Login</a>
-                            </li>
-                        </ul>
-
+        <div class="d-flex">
+            <div>
+                @if (tempLogIn)
+                {
+                    <a class="bi bi-person-circle" style="font-size:25px;color:black;justify-content:center;padding:0px;margin:0px;vertical-align:middle"></a>
+                }
+                else
+                {
+                    <div class="p-2" style="margin:0px;line-height:10px;font-size:12px;font-weight:600;border:1px solid green;border-radius:20px;text-align:center;">
+                        <a href="">Teken in</a>
+                        <hr style="margin-top:8px;margin-bottom:5px;">
+                        <a href="">Registreer</a>
                     </div>
-                </li>
+                }
+            </div
+            <div>
 
-            </ul>
+            </div>
         </div>
-
     </div>
+
+    <div class="bg-info" style="">
+        <div class="nav nav-tabs" style="justify-content:space-between;height:60px;vertical-align:middle;">
+            <div class="nav-item">
+                <NavLink class="nav-link" href="" Match="NavLinkMatch.All" >
+                    <span class="" aria-hidden="true"></span> Tuis
+                </NavLink>
+            </div>
+            <div class="nav-item">
+                <NavLink class="nav-link" href="BookStore">
+                    <span class="" aria-hidden="true"></span> Boek Winkel
+                </NavLink>
+            </div>
+            <div class="nav-item">
+                <NavLink class="nav-link" href="MyBooks">
+                    <span class="" aria-hidden="true"></span> My Boekrak
+                </NavLink>
+            </div>
+            <div class="nav-item">
+                <NavLink class="nav-link" href="ContactUs">
+                    <span class="" aria-hidden="true"></span> Kontak Ons
+                </NavLink>
+            </div>
+        </div>
+    </div>
+
+    
+
+
 </div>
 
 @code {
-    private bool collapseNavMenu = true;
+    private bool tempLogIn = false;
 
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
 }
